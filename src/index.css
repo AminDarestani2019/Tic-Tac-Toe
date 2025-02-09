@@ -173,9 +173,10 @@ ol {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
   margin: 0;
   padding: 0;
+  max-width: 26rem;
 }
 
 #game-board button {
@@ -188,6 +189,18 @@ ol {
   cursor: pointer;
   font-family: 'Caprasimo', cursive;
   padding: 1rem;
+}
+
+@media(max-width:600px){
+  #game-board ol {
+    max-width: 24rem; /* تضمین سه ستون در موبایل */
+  }
+
+  #game-board button {
+    width: 6rem;
+    height: 6rem;
+    font-size: 4rem;
+  }
 }
 
 #game-over {
