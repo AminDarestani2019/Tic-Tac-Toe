@@ -75,7 +75,7 @@ function App() {
     setGameTurns([]);
   }
 
-  function handlePlayerNameChange(){
+  function handlePlayerNameChange(symbol,newName){
     setPlayers(prevPlayers =>{
       return {
         ...prevPlayers,
