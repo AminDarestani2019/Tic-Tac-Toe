@@ -171,18 +171,23 @@ ol {
 
 #game-board ol {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 1rem;
-  justify-content: center;
-  max-width: 26rem; 
+  grid-template-columns: repeat(3, 1fr); /* همیشه ۳ ستون */
+  gap: 0.5rem;
+  max-width: 26rem; /* محدودیت عرض کلی */
   margin: auto;
   padding: 0;
 }
 
 #game-board button {
   width: 100%;
-  aspect-ratio: 1; 
+  height: 6rem; /* ارتفاع ثابت برای جلوگیری از هم‌پوشانی */
   font-size: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #333;
+  background: white;
+  cursor: pointer;
 }
 
 @media(max-width:600px){
@@ -191,6 +196,7 @@ ol {
   }
 
   #game-board button {
+    height: 4rem; /* ارتفاع کمتر در موبایل */
     font-size: 3rem;
   }
 }
